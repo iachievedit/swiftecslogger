@@ -26,7 +26,7 @@
 
 import Foundation
 
-enum LogLevel : String, Codable {
+public enum LogLevel : String, Codable {
   case debug = "debug"
   case info = "info"
   case warn = "warn"
@@ -49,7 +49,7 @@ struct LogMessage<T: Codable>: Codable {
   }
 }
 
-class EcsLogger {
+public class EcsLogger {
   private let logFilePath: String
   
   init(logFilePath: String) {
