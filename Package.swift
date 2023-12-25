@@ -35,12 +35,9 @@ let package = Package(
             targets: ["SwiftEcsLogger"]
         ),
     ],
-    dependencies: [
-    ],
     targets: [
+      .target(name: "SwiftEcsLogger", path: "Sources"),
       .testTarget(name: "swiftecsloggerTests",
                         dependencies: ["SwiftEcsLogger"]),
-      .target(name: "SwiftEcsLogger",
-                     dependencies: [])
     ]
 )
