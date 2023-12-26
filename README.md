@@ -19,7 +19,7 @@ Perhaps the functionality already exists in another package, but every logger I 
 Add the following to your `Package.swift` top-level dependencies:
 ```swift
     dependencies: [
-      .package(url:  "https://github.com/iachievedit/swiftecslogger", branch:("main")),
+      .package(url:  "https://github.com/iachievedit/swiftecslogger", from:"0.0.1"),
     ],
 ```
 
