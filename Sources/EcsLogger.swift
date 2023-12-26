@@ -52,7 +52,7 @@ struct LogMessage<T: Codable>: Codable {
 public class EcsLogger {
   private let logFilePath: String
   
-  init(logFilePath: String) {
+  public init (logFilePath: String) {
     self.logFilePath = logFilePath
     
     // Create the file if it doesn't exist
@@ -61,7 +61,7 @@ public class EcsLogger {
     }
   }
 
-  func log<T: Codable>(level: LogLevel, message: String, logData: T = "") {
+  public func log<T: Codable>(level: LogLevel, message: String, logData: T = "") {
     if let fileHandle = FileHandle(forWritingAtPath: logFilePath) {
       fileHandle.seekToEndOfFile()
 
