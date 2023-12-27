@@ -51,7 +51,7 @@ logger.log(level:  .info, message:  "Log, log, it's big, it's heavy, it's wood")
 Structured logging takes logging to a whole new level.  Let's say we're developing an application which reads and logs the CPU temperature at a given time.  We could log it like:
 
 ```swift
-logger.log(level: .info, message:  "The current CPU temperature is \{cpuTemperature}")
+logger.log(level: .info, message:  "The current CPU temperature is \(cpuTemperature)")
 ```
 
 This works, but, consider the individual that is looking for CPU temperatures above 60 degrees Celsius.  That'd be a lot easier if we could use Kibana to search for it.  Structured logging can help:
